@@ -1,12 +1,14 @@
 package cointwo.web.dto;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Getter
 public class MemberDto {
 
+    @Setter
     private Long uid;
     private String id;
     private String password;
