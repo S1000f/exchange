@@ -13,6 +13,7 @@ public class AuthService {
 
     public AuthInfo authenticate(String id, String password) {
         MemberDto member = memberDao.selectById(id);
+
         if(member == null) {
             throw new WrongPasswordException();
         }

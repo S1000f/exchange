@@ -1,5 +1,6 @@
 package cointwo.web.dto;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +24,7 @@ public class MemberDto {
     }
 
     public void changePassword(String oldPassword, String newOne) {
-        if(!password.equals(oldPassword)) {
+        if (!password.equals(oldPassword)) {
         }
 
         this.password = newOne;

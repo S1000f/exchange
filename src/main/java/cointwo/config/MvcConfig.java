@@ -29,7 +29,15 @@ public class MvcConfig implements WebMvcConfigurer {
         return messageSource;
     }
 
-//    @Override
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/style/**")
+                .addResourceLocations("/resources/style/")
+                .setCachePeriod(31556926);
+
+    }
+
+    //    @Override
 //    public void addViewControllers(ViewControllerRegistry registry) {
 //        registry.addViewController("/main").setViewName("main");
 //    }
