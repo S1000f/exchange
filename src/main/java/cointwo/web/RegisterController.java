@@ -3,6 +3,7 @@ package cointwo.web;
 import cointwo.service.DuplicateMemberException;
 import cointwo.service.MemberRegisterService;
 import cointwo.web.dto.RegisterCommand;
+import cointwo.web.validator.RegisterCommandValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -24,6 +25,7 @@ public class RegisterController {
 
     @PostMapping("/register/step2")
     public String registerProceed(@Valid RegisterCommand registerCommand, Errors errors) {
+        new RegisterCommandValidator().validate(registerCommand, errors);
         if(errors.hasErrors()) {
             return "register/step1";
         }

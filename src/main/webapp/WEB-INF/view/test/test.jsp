@@ -19,6 +19,11 @@
         border-radius: 5px;
     }
 
+    .more-links {
+        display: flex;
+        justify-content: flex-end;
+    }
+
 </style>
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
@@ -31,7 +36,7 @@
                 <div class="title text-center" style="padding-bottom: 30px;">
                     <c:if test="${! empty registerCommand}" >
                     <h3>
-                        <spring:message code="register.done" arguments="${registerCommand.name},${registerCommand.id}" />
+                        <spring:message code="register.done" arguments="${registerCommand.name}, ${registerCommand.id}" />
                     </h3>
                     </c:if>
                 </div>

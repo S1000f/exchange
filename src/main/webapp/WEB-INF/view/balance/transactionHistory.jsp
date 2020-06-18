@@ -8,14 +8,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Transaction-History</title>
 </head>
 <style>
 </style>
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
     <div class="container">
-        <h2>Hello world</h2>
+        <h2>Hello world, This is transaction history</h2>
         <c:if test="${empty authInfo}">
             <h3>Welcome</h3>
         </c:if>
@@ -25,4 +25,3 @@
     </div>
 </body>
 </html>
-
