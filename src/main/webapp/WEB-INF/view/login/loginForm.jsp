@@ -38,7 +38,7 @@
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
 
-    <div class="container">
+    <div class="container wrapper">
         <div class="row">
             <div class="col-md-4 login-box shadow">
                 <div class="title text-center" style="padding-bottom: 30px;">

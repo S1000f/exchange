@@ -14,7 +14,7 @@
 </style>
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
-    <div class="container">
+    <div class="container wrapper">
         <div class="row">
             <jsp:include page="colNavbar.jsp" flush="false" />
             <div class="col-md-10">

@@ -14,7 +14,7 @@
 </style>
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
-    <div class="container">
+    <div class="container wrapper">
         <h2>Hello world</h2>
         <c:if test="${empty authInfo}">
             <h3>Welcome</h3>
