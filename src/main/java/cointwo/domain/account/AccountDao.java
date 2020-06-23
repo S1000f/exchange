@@ -70,12 +70,14 @@ public class AccountDao {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update((Connection conn)-> {
                     PreparedStatement pstmt = conn.prepareStatement(
-                            "insert into ACCOUNT(UID, TENDER, STATUS) values(?,?,?)",
+                            "insert into ACCOUNT(UID, TENDER, STATUS, BTC, ETH) values(?,?,?,?,?)",
                             new String[] {"AID"}
                     );
                     pstmt.setLong(1, accountDto.getUid());
                     pstmt.setInt(2, accountDto.getTender());
                     pstmt.setString(3, accountDto.getStatus());
+                    pstmt.setDouble(4, accountDto.getBtc());
+                    pstmt.setDouble(5, accountDto.getEth());
 
                     return pstmt;
                 }, keyHolder

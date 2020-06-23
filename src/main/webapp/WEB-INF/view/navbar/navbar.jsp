@@ -12,7 +12,7 @@
 </head>
 
 <style class="common-style">
-    .container {
+    .wrapper {
         margin-top: 100px;
     }
 
@@ -55,6 +55,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="<c:url value='/login'/>"><spring:message code="login.title" /></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="<c:url value='/register/step1'/>"><spring:message code="member.register" /></a>
+            </li>
         </c:if>
         <c:if test="${! empty authInfo}">
             <li class="nav-item active">
@@ -64,9 +67,6 @@
                 <a class="nav-link" href="<c:url value='/logout'/>"><spring:message code="logout.title" /></a>
             </li>
         </c:if>
-        <li class="nav-item active">
-            <a class="nav-link" href="<c:url value='/register/step1'/>"><spring:message code="member.register" /></a>
-        </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             language
@@ -77,4 +77,4 @@
             </div>
         </li>
     </ul>
-  </nav>
+</nav>

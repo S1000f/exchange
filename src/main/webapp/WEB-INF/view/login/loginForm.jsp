@@ -47,20 +47,18 @@
                 <form:form modelAttribute="loginCommand">
                 <div class="errors"><form:errors /></div>
                 <div class="form-group">
-                    <label for="id"><spring:message code="id" />:
+                    <label for="id"><spring:message code="id" />:</label>
                     <form:input path="id" class="form-control" />
                     <div class="errors">
                         <form:errors path="id"/>
                     </div>
-                    </label>
                 </div>
                 <div class="form-group">
-                    <label for="password"><spring:message code="password" />:
+                    <label for="password"><spring:message code="password" />:</label>
                     <form:password path="password" class="form-control" />
                     <div class="errors">
                         <form:errors path="password" />
                     </div>
-                    </label>
                 </div>
                 <div class="form-group form-check">
                     <label class="form-check-label"><spring:message code="rememberId" />:
@@ -70,6 +68,9 @@
                 <input type="submit" class="btn btn-primary btn-block" value="<spring:message code="login.btn" />">
                 </form:form>
                 <div class="more-links">
+                    <button type="button" class="btn" disabled>
+                        <spring:message code="register.reminder" />
+                    </button>
                     <button type="button" class="btn btn-link">
                         <a href="<c:url value='/register/step1'/>"><spring:message code="member.register" /></a>
                     </button>

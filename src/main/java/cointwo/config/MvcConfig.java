@@ -1,6 +1,7 @@
 package cointwo.config;
 
-import cointwo.web.interceptor.LoginCheckInterceptor;
+import cointwo.web.interceptor.LoginCheckFalseInterceptor;
+import cointwo.web.interceptor.LoginCheckTrueInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +16,9 @@ import java.util.Locale;
 public class MvcConfig implements WebMvcConfigurer {
 
     @Autowired
-    private LoginCheckInterceptor loginCheckInterceptor;
+    private LoginCheckTrueInterceptor loginCheckTrueInterceptor;
+    @Autowired
+    private LoginCheckFalseInterceptor loginCheckFalseInterceptor;
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -41,7 +44,7 @@ public class MvcConfig implements WebMvcConfigurer {
     @Bean
     public SessionLocaleResolver sessionLocaleResolver() {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-        localeResolver.setDefaultLocale(Locale.ENGLISH);
+        localeResolver.setDefaultLocale(Locale.KOREAN);
 
         return localeResolver;
     }
@@ -56,7 +59,9 @@ public class MvcConfig implements WebMvcConfigurer {
 //
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginCheckInterceptor).addPathPatterns("/balance/**");
+        registry.addInterceptor(loginCheckFalseInterceptor).addPathPatterns("/register/**", "/login/**");
+        registry.addInterceptor(loginCheckTrueInterceptor).addPathPatterns("/balance/**");
+
     }
 
     @Override

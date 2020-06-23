@@ -23,16 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="29586d4d-771c-4d73-8a65-285aea6f9e0f">
-        <schema name="cointwo" object-types="function, view, column, table" />
-        <schema name="mysql" object-types="table" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="29586d4d-771c-4d73-8a65-285aea6f9e0f">
-      <console name="cointwo-local" type="STANDARD" schema="cointwo" session="Main">create database cointwo character set=utf8;
+      <console name="cointwo-local" type="STANDARD" schema="cointwo" session="Main"><![CDATA[create database cointwo character set=utf8;
 
 grant all privileges on cointwo.* to dohpkim@localhost;
 
@@ -48,7 +43,7 @@ create table cointwo.MEMBER (
 insert into cointwo.MEMBER (ID, PASSWORD, NAME, REGDATE)
     values ('dohpkim', '8175', 'Milly', now());
 
-select * from MEMBER where NAME = 'Milly';</console>
+select * from MEMBER where NAME = 'Milly';]]></console>
       <console name="create_tables" type="STANDARD" schema="mysql" session="Main"><![CDATA[CREATE TABLE MEMBER
 (
     `UID`       INT             NOT NULL    AUTO_INCREMENT, 

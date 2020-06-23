@@ -52,7 +52,7 @@ public class LoginController {
             }
             response.addCookie(rememberCookie);
 
-            return "main/main";
+            return "redirect:/main";
         } catch (WrongPasswordException e) {
             errors.reject("idPasswordNotMatching");
             return "login/loginForm";

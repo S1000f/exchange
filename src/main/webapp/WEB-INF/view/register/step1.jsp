@@ -36,28 +36,24 @@
                 </div>
                 <form:form action="step2" modelAttribute="registerCommand">
                     <div class="form-group">
-                        <label><spring:message code="id" />:
+                        <label><spring:message code="id" />:</label>
                         <form:input path="id" class="form-control" />
                         <div class="errors"><form:errors path="id" /></div>
-                        </label>
                     </div>
                     <div class="form-group">
-                        <label><spring:message code="name" />:
+                        <label><spring:message code="name" />:</label>
                         <form:input path="name" class="form-control"/>
                         <div class="errors"><form:errors path="name" /></div>
-                        </label>
                     </div>
                     <div class="form-group">
-                        <label><spring:message code="password" />:<br />
+                        <label><spring:message code="password" />:</label>
                         <form:password path="password" class="form-control"/>
                         <div class="errors"><form:errors path="password" /></div>
-                        </label>
                     </div>
                     <div class="form-group">
-                        <label><spring:message code="password.confirm" />:<br />
+                        <label><spring:message code="password.confirm" />:</label>
                         <form:password path="confirmPassword" class="form-control"/>
                         <div class="errors"><form:errors path="confirmPassword" /></div>
-                        </label>
                     </div>
                     <input type="submit" class="btn btn-primary btn-block" value="<spring:message code="register.btn" />" >
                 </form:form>

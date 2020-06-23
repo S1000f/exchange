@@ -14,18 +14,29 @@
 </style>
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
-    <div class="container">
-        <div class="row">
-            <jsp:include page="colNavbar.jsp" flush="false" />
-            <div class="col-md-10">
-                <h2><spring:message code="balance.profit.title"/></h2>
-                <c:if test="${empty authInfo}">
-                    <h3>Welcome</h3>
-                </c:if>
-                <c:if test="${! empty authInfo}">
-                    <h3>${authInfo.name}님 환영합니다.</h3><br />
-                    <h4>tender: ${accountDto.tender} 원</h4>
-                </c:if>
+    <div class="container wrapper">
+        <div class="container">
+            <div class="row">
+                <jsp:include page="colNavbar.jsp" flush="false" />
+                <div class="col-md-10">
+                    <div class="top-box">
+                        <h2><spring:message code="balance.profit.title"/></h2>
+                        <c:if test="${empty authInfo}">
+                            <h3>Welcome</h3>
+                        </c:if>
+                        <c:if test="${! empty authInfo}">
+                            <h3>${authInfo.name}님 환영합니다.</h3><br />
+                            <h4>tender: ${accountDto.strTender} 원<br />
+                                BTC: ${accountDto.btc}<br />
+                                ETH: ${accountDto.eth}<br />
+                                ${accountDto.status}
+                            </h4>
+                        </c:if>
+                    </div>
+                    <div class="bottom-box">
+                        <h4>another box</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
