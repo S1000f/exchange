@@ -15,7 +15,7 @@ public class LocaleController {
     @RequestMapping("/changeLocale.do")
     public String changeLocale(@RequestParam(required = false) String locale, HttpServletRequest request) {
 
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(false);
         Locale locales = null;
 
         if (locale.matches("ko")) {

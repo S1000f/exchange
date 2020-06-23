@@ -1,4 +1,4 @@
-package cointwo.service;
+package cointwo.service.member;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

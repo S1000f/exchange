@@ -32,7 +32,7 @@
 
 </style>
 
-<nav class="navbar navbar-expand-sm fixed-top navbar-dark">
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark shadow">
     <a class="navbar-brand" href="<c:url value='/main'/>" >Cointwo</a>
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -42,7 +42,7 @@
             <a class="nav-link dropdown-toggle" href="<c:url value='/balance/profit'/>" id="navbardrop" data-toggle="dropdown">
             자산
             </a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu shadow">
             <a class="dropdown-item" href="<c:url value='/balance/profit'/>"><spring:message code="balance.profit.title"/></a>
             <a class="dropdown-item" href="<c:url value='/balance/profit'/>"><spring:message code="balance.transfer.title"/></a>
             <a class="dropdown-item" href="<c:url value='/balance/transactionHistory'/>">

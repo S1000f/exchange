@@ -1,8 +1,8 @@
 package cointwo.web;
 
-import cointwo.service.AuthInfo;
-import cointwo.service.AuthService;
-import cointwo.service.WrongPasswordException;
+import cointwo.service.member.AuthInfo;
+import cointwo.service.member.AuthService;
+import cointwo.service.member.WrongPasswordException;
 import cointwo.web.dto.LoginCommand;
 import cointwo.web.validator.LoginCommandValidator;
 import org.springframework.beans.factory.annotation.Autowired;

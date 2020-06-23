@@ -24,7 +24,7 @@
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
     <div class="container">
         <div class="row">
-            <div class="col-md-4 register-box">
+            <div class="col-md-4 register-box shadow">
                 <div class="title text-center" style="padding-bottom: 30px;">
                     <h2><spring:message code="member.register" /></h2>
                 </div>

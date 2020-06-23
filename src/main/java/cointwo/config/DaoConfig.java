@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-public class MemberConfig {
+public class DaoConfig {
 
     @Bean(destroyMethod = "close")
     public DataSource dataSource() {

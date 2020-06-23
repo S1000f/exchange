@@ -15,13 +15,18 @@
 <body>
     <jsp:include page="../navbar/navbar.jsp" flush="false" />
     <div class="container">
-        <h2>Hello world, This is transaction history</h2>
-        <c:if test="${empty authInfo}">
-            <h3>Welcome</h3>
-        </c:if>
-        <c:if test="${! empty authInfo}">
-            <h3>${authInfo.name}님 환영합니다.</h3>
-        </c:if>
+        <div class="row">
+            <jsp:include page="colNavbar.jsp" flush="false" />
+            <div class="col-md-10">
+                <h2>Hello world, This is <spring:message code="balance.transactionHistory.title"/> page</h2>
+                <c:if test="${empty authInfo}">
+                    <h3>Welcome</h3>
+                </c:if>
+                <c:if test="${! empty authInfo}">
+                    <h3>${authInfo.name}님 환영합니다.</h3>
+                </c:if>
+            </div>
+        </div>
     </div>
 </body>
 </html>

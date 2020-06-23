@@ -1,7 +1,8 @@
 package cointwo.web;
 
-import cointwo.service.DuplicateMemberException;
-import cointwo.service.MemberRegisterService;
+import cointwo.service.account.AccountService;
+import cointwo.service.member.DuplicateMemberException;
+import cointwo.service.member.MemberRegisterService;
 import cointwo.web.dto.RegisterCommand;
 import cointwo.web.validator.RegisterCommandValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,18 @@ public class RegisterController {
 
     @Autowired
     private MemberRegisterService memberRegisterService;
+    @Autowired
+    private AccountService accountService;
 
     @RequestMapping("/register/step1")
     public String register(RegisterCommand registerCommand) {
 
         return "register/step1";
+    }
+
+    @GetMapping
+    public String redirect() {
+        return "redirect:/register/step1";
     }
 
     @PostMapping("/register/step2")
@@ -31,7 +39,8 @@ public class RegisterController {
         }
 
         try {
-            memberRegisterService.regist(registerCommand);
+            Long uid = memberRegisterService.regist(registerCommand);
+            accountService.createInitAccount(uid);
 
             return "register/step2";
         } catch (DuplicateMemberException e) {

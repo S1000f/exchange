@@ -40,7 +40,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4 login-box">
+            <div class="col-md-4 login-box shadow">
                 <div class="title text-center" style="padding-bottom: 30px;">
                     <h2><spring:message code="login.title" /></h2>
                 </div>

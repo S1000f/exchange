@@ -1,4 +1,4 @@
-package cointwo.service;
+package cointwo.service.member;
 
 import cointwo.domain.member.MemberDao;
 import cointwo.web.dto.MemberDto;
